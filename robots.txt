@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spindivepod.github.io/spindive-archive/sitemap.xml
