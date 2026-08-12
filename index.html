@@ -20,6 +20,8 @@
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; }
   .card { background: #16213e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1.2rem; transition: transform 0.2s, border-color 0.2s; }
   .card:hover { transform: translateY(-2px); border-color: #e94560; }
+  .ep-listen { display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; color: #e94560; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; }
+  .ep-listen:hover { text-decoration: underline; }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; }
   .ep-title { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1.3; }
   .ep-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
@@ -1298,6 +1300,7 @@ function renderCards(list) {
         ${ep.year ? `<span class="ep-year">📅 ${ep.year} dive</span>` : ''}
         ${ep.hasTranscript ? '<span class="ep-transcript">🔍 searchable</span>' : ''}
       </div>
+      ${ep.id ? `<a class="ep-listen" href="https://www.buzzsprout.com/2316519/${ep.id}" target="_blank" rel="noopener">▶ Listen</a>` : ''}
     `;
     grid.appendChild(card);
   });
