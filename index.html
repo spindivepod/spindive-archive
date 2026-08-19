@@ -20,8 +20,6 @@
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; }
   .card { background: #16213e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1.2rem; transition: transform 0.2s, border-color 0.2s; }
   .card:hover { transform: translateY(-2px); border-color: #e94560; }
-  .ep-listen { display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; color: #e94560; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; }
-  .ep-listen:hover { text-decoration: underline; }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; }
   .ep-title { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1.3; }
   .ep-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
@@ -33,6 +31,8 @@
   .ep-tags { margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
   .ep-year { font-size: 0.8rem; background: #e9456022; color: #e94560; padding: 0.15rem 0.5rem; border-radius: 8px; border: 1px solid #e9456044; }
   .ep-transcript { font-size: 0.75rem; background: #1a3a2a; color: #7ae8a0; padding: 0.15rem 0.5rem; border-radius: 8px; border: 1px solid #7ae8a044; }
+  .ep-listen { display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; color: #e94560; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; }
+  .ep-listen:hover { text-decoration: underline; }
   #no-results { text-align: center; color: #a0a0c0; padding: 3rem; font-size: 1.1rem; display: none; }
   @media (max-width: 600px) { header h1 { font-size: 1.8rem; } .grid { padding: 1rem; } }
 </style>
@@ -40,7 +40,7 @@
 <body>
 <header>
   <h1>🎡 SpinDive Archive</h1>
-  <p>112 episodes · Seasons 1–3 · Pern, Dave &amp; Joanne · 33 episodes with full transcript search</p>
+  <p>123 episodes · Seasons 1–3 · Pern, Dave &amp; Joanne · 29 episodes with full transcript search</p>
 </header>
 
 <div class="controls">
@@ -53,7 +53,7 @@
     <button class="filter-btn" onclick="setFilter('year', this)">Year Dives</button>
     <button class="filter-btn" onclick="setFilter('transcript', this)">Has Transcript</button>
   </div>
-  <span id="count">112 episodes</span>
+  <span id="count">123 episodes</span>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -61,6 +61,26 @@
 
 <script>
 const episodes = [
+  {
+    "id": "19641206",
+    "title": "S3 E28 - 2002",
+    "date": "Aug 17, 2026",
+    "season": "s3",
+    "desc": "",
+    "year": "2002",
+    "keywords": "abc able about absolutely academy account across actress acts actual actually additional admitted advocating after afternoon again age ago agreed ahead aida ain air aired airplane alarm alarms alcohol alert alicia all allegedly almost along already also aluminum always amazing amazon american amount and angela anniversary annoying another answer anti anxiety any anybody anymore anyone anything anyway appeal arcade archives are area aren around arrested artist artsy ashante ashanti ask asked asking associated atms attached attack audit austin authorities auto automatic average avril award away awesome awkward back background bad badness baked ball balls band bank base baseman basically bat batch bathroom beach because been before began beginning behind being believe bells beltway berry best better between bible big bigfoot bigger bikini billboard billion billionaires binding bingo birthday bit bizarre black blah blame block blockbuster blowing bluey blurry boar board boardwalk bold bond boo boots bore both bottom bought bounced bouncing bowl bowls boy boys brady branch brazil break breathe bring brings broadcast brother brought bucks build burn burners burning burnt bus businesses but button buy buying buzzes bye call called calling came camp camping can canadian canceled canceling cancer canon caps car card cards caregiver cares carlson cars cart carter case cash cashed catch categories caught cause cbs ceremonies chains challenge change changing channel chantilly chaotic character chart charted charts check checked checker checks cherokee chicken chickens children chop chorus christmas chrysler church circle circulating city clarkson clerb clip close closer clue clutch clutching coachella collins colorado come comes coming comp complain completely complicated computer concealed concert concession console construction contestant convicted cool correct corrected correcting correction corrections correctly costco costs could couldn country couple couples course court coverage covid cows crap cray crazy created creed cross crossfire crush cry cult cup customer customers cut dad dakota damaging danced dangerous darn dave dawn day days dead deal debunked debut decimal deck dedicated deep definitely delete deleting depends depot desert desire despise despite destroying details did diddy didn died different dilemma dirty discovered discuss discussed dishes dishwasher dishwashers disney dive doable doctor documentary documents docuseries dodge dodger does doesn doing dollars don done donkey door doot dorothy dot double down downloads downside dragged drama drawers drinking drive driver drivers driveway driveways driving dropped drove dude dun dunk dusk dvds dynasty each earlier easiest easily easy eat eating eats effort eight either elder electric electronic electronically elizabeth else elton email emails embroider emmy employees end ends energy engine england enlisted entire episode episodes euro eve even event events ever every everybody everyone everything everywhere evicted eviction evidence evidently evolved exactly except excited excitement exe expanding experience exterior extra eyed fabric face faced fact fair fall falls false familiar family famous fan fantastic fantasy far farewell fascinating fat father featuring fedex feel feeling fees fell felt female fence festival fiat fifty fighting figure file files fill film films final finale finally find fine fingers fire first five flatinum flight flipped float floats flushed fly flying follow food foolish footprints for forget fort forth found founded four freaked freaking fred french friday friends from front frustrated fuck fucking full fun functioning fund funding funny further gaga game gamecube games gangster garage gas gatherings gave gear geez gen general get gets getting giant girl girlfriend give gives giving glad global god goes going golden gonna good goodness google gore gosh got gotcha gotta graduated grammy grand great greek grew groceries grocery gta guarantee guess guessing guilt gun gunfire gunning guy guys had haley half halle halloween hand handful handing handle handles handmade hands handwritten hang hanging happen happened happening harley has hasn have haven hawaii hbo heading hear heard heart heartwarming heat held hell hello her here hey hidden hideous high highway hill him himself hip hippie his history hit hmm hoax hogs hoh hoha hold hole holiday hollow holy home honest hooker hookers hospital hot hotel hotels hours house houses how huge huh hundred hundreds hunt hunting hurt husband ian idaho idea ideas idol imagine important impossible incredible infestation innings innocent insane insanity inside insisting insync interactive interested interesting interior into invented involve ios ish isn isolated issues itching its itself japan japanese jay jeep jennifer jesus jet jim jimmy joanne job joe joey john joined joker joking jubilee jump jumped jury just kamu kane karen keep keeps kelly kept keys kid kids kieran kill killed kind kinds king knee knew knit know knowledge knows kong labeled lacey lady lala land lane last late later launched lauren lawa lawn league learn learning least lee left leg legs leno less let levine license life light like lilith limit limited lincoln lining lion lisa list listed listen listened listening literally little live living loaded local locations locks long longer longest look looked looking looks lopez lord losers losing lost lot love loving luckily lucky lyric mad madden made magically magnetic major make makes makeshift making mallory man manager managers manassas manhack manual many maraud marauding mario mark marriage married maryland masks massive matchy math mattel matters may maybe mayer mean meaning means medication meets melody memorial menu mess met metroid michaels michelle middle might miles million mind mine minute minutes missed mission model mom moment monday money monster month months more morning mother motherboard motion moves movie moving mowing much mud multi multiple murder murdered murdering murders music musical musician must myself myth myths name navy nbc near nebraska need needed needs negotiate neighborhood neither nellie nelly nerds never new news next nice nickel nickelback nickelodeon night nightmare nineteen nintendo noise none norfolk north nostalgic not notable notebook nothing noves now nowadays nowhere nudity number numbers nypd obviously occurred occurs ocean off office officially okay old oldest oldies olympics once one ones only oof open opening operation order organize organized original originally other others our out outside outstanding over overpowered overseas own owners owns package paper paperweight paralyzed parents park parked parking part partial passengers pat patients pause pay pcs pencil pentagon people pepsi perfect perform pernel person personal peterson phase phone photos picked pig pin pink place plan plate plates play played playing plot pod point pointing pokemon pole pond poor popped popular population portable possible post posted postpartum potato pound power powerhouse praise pre president press pretty previous price prices prime prinel prize probably problem problems production promoting proud provably psychosis puddle pull pulled pulls pump pumping purchase push put puts puzzles queen question questions quick quiet quinn quinzel rain rained rallied rallying ran rando random range rapper ratings read ready reagan real realize really realm rec recall recent recollection recommend record recorded redone reignited reinstall reinvestigating relationship release released releasing reliving remember remembers remind reminding remix remove rendition renditions rent repairs replace replaced replays reported representative representing research reserve respond responded responsible retrial review revisit rhine ride rides rifles rigging right ringtone ringtones river road roads roam roaming rob robberies robbers robbery rockers rocks role roles rome room row rowland rpg ruby rule run running sad safeguards safely said sale sales salvo same sang sapphire sasquatch saw say saying says scary score scott screaming screen screw screwed scroller scrolls seal season seattle second seconds section security see seeing seem seemed seems seen sell selling seminar sensational sensor sequestered serena series seriously set sets setting seven seventy shaking shakira share sharing she shield ship shit shocked shoot shooting shootings shopping shops shot shotguns should show showed shower showers shows side sides sign signal signs silent since singing single sings sites sitting six sixty sky sleep sleeper sleeping slowly small sniper some somebody someone something somewhat son song songs songwriter sons soon sopranos sorry sound sounds souvenir space speaking special speed spent spin spinner sports spot spots spree stack stadium stage stalled stare staring stars start started starts state station stay steve stick still stoked stop stopped stories story straight strangest strap street stuck stuff stupid style subject such suck sucked sudden suddenly summerall sun sunday sunshine super support supposed supposedly sure surprise suspicion suspiciousness sweet swift system systems table take taking talk talked talking tattoo taxis taylor tea team technology teenage television tell tellers telling ten tent terrified terror test texas than thank thanks thanksgiving that the theft their them theme then therapy there these they thin thing things think thinking this those though thought thousand three threw throne through throw thrown thursday ticket tickets tim time times tiny tired tires title today together toilet toilets told tolerable tom ton tonight tony too took top topic total totally touch touched tough tour town toy toys tracked tracker trade traffic train transfer translate trapping traps treated trial tried trimmed trip trivia trooper true trunk try trying turn turns turny twenty two type uap ufo ugh ultimate under unfortunately unknown unlucky until update upon urge used usher using usually vacuum van vanessa variety venus versed version versions very vice video videos vinyl violation viruses volunteered voted voting waist wait walk wall want wanted wanting was wash washed washing wasn wasting watch watched watching water way weapons wear wearing wears wedding wednesday week weekend weeks weight weights weird well wending went were weren west what whatever whatsoever when where wherever which while white who whoa whole whose why wide wife wild will willard williams wimbledon win window windstorms winner winners winning wins winter wire wish with without woman won wonder wondered wonderful word work worked working workout world worth would wouldn wow write wrong wrote xers yapped yard yay yeah year years yep yes yet you young younger your yourself youthful zero zigzagged",
+    "hasTranscript": true
+  },
+  {
+    "id": "19607622",
+    "title": "S3 E27 - 2024",
+    "date": "Aug 10, 2026",
+    "season": "s3",
+    "desc": "",
+    "year": "2024",
+    "keywords": "abarth abc able about absolutely accident account across action actually added ads adult adults affair afraid africa after afternoon again against age aggressive ago agreement ahead alaska album albums alcatraz alien all allie almost alone along already also always amazing amazon america amount anaheim and angela angst annie another answer anthologies anthology any anybody anymore anyone anything anytime anyway anywhere apart apes apparently appreciate april are area around asked asleep audio august australia australian available away awesome awful baby bacchus back background bad ball bam band bands bank bar bare bars barth baseball based basically basketball batman battle beast beat beating beautiful beautifully became because become bed been before began beginning being believe benson best better between big bigger biggest billion billionaire billionaires bing bit black blah blake blathered blew blood blow blowing blu blue bluey blust boats bon bong book books boone born boston both bottom bought bowl bowls box boy boys brand break breakdancer breakdown breaks bridge bring broadcasts brother brought brutal buckeys bucks budge buff bugs build building bunch bunny bunyman burn burning burns but butt button buttons buy buying bye calculated california call called calls came can cancer candy canon canyon capability capitol car cardi cares carmax caroline carried cars cartoon case catering cbs cds celebrities cell celsius celtics ceremonies certain chalamet challenge change changed chantilly character characters chase chases cheaper check cheesy cherry chicken chiefs chops christmas chuck chunk circles city class clearly climb climbed clint clips clock close closer clothing club clue clueless cluster coast colin collect collection colored come comeback comes comic coming comment comments company completed computer computers con concerts condo confused connection connor construction contact control controlling controversial convince cool coop cops copy corners correct corrected corrections cosplayer cost cotton could couldn counted countries country couple course court covered crap crazy create cricket cry cryptids cup cure curly current cuts cyrus dallas dared darkness daughter dave day days dead deadpool deal dealership debate december deck dedicated deep defeating definitely degrees delta department depot design designer despicable detective did didn die died diego dies difference different differently dig digital directed disappointed disc discusses dishwasher disintegrate disintegrated displayed distance dives divide dna doc documentary docuseries dodgers does doesn dogg doing dollars domestic don done doomsday door doreen double dove down downstairs dream drew drive driven driver drives driving drop dude duds duel dune during dvd dvds each early earth east eastwood easy eclipse edge edward eerie eiffel eight either electric electrical elephant eleven else elton email emails emmy emmys emotion emotions empire encounters end english enough entertainer entertaining entertainment entire episode episodes escape eskimo especially even event events eventually ever every everybody everything everywhere evidence exactly excellent excited exercise expect explained extension external eye fade fading fahrenheit fair fallado family fan far farms farrell fault feast feel feeling feels fell felt fence ferrari few fiat fifty figure figured final finally finals finance find finding finds fine first fish five fix flagged flashes flashy floating floats florida flying focused follow following football for forbes foreign forget forgot forgotten forth forward foster found four fox frame frames freaking free freebie french friday friend friends from front fuck fucking full fun funeral funnier funny further gaga game games gangster gangsters garage garden gardening gate gearhead geez genius gentlemen get gets getting ghost ghosts giant girl give glad gladiator glass global globe glorifying god godzilla goes going golf gone gonna good goodbye goodness google gosh got gotcha gotta grab grand grandchild grandma grandmother gratuitous great grew grossing grow growing guarantee guess guillotine guy guys had hadn haggle hair haircut hairdo haley half halfway halloween handles hands handy happened happening happens hard harlan harley harlow harsh has hat hate hated haunted have haven having hbo head hear heard heartbreaking heavily hedgehog height heights hell helped helps henry her here herself hey hide high highlights him himself his history hit hits hmm hockey hoh hold holes holland holy home homework hood hoping hot hottest hour hours house how huge huh hundred hurricane hurricanes ian idaho idea ideas identify imaginary imagine immediately impartial imprisonment incredible indian individually information insane inside install interest interested interesting internet into introduce introducing involve isn issue issues italian italy itself jack jail jamie jane japan jason jelly jesus jimmy joan joanne job jodie joe joey john joker journey jovi jude july jump just keeps kendrick kidding kids kill killed kind king kingdom knew knocking know known knows kong kooky krypton kung labeled labored ladies lake lala lamar lamp land landed landfall landman lane laptop largest last laughing laundry laurie lawyers lead leads leaf lee left less lesson let letters letting levels library license lifestyles light lights like liked likely likes lilith limited line linky lion list listen listeners listening literally little live lively lives living local loki lon london long look looked looking looks loose lord lore lose lost lot louis love loved loving lowe luckily lunch lyric mad made magic magnificent mail main make maker makes makeup making malone man mans manual many mark market marketing married mascots match matched math mavericks may maybe mcdavid mean mechanic medium meet melody mention mentioned mercedes met mexico michelle mid middle midnight might mile mileage miles miley million minaj mind minions minute minutes missed missing mix mixed mixtape moana modified mom moment monarch monday money monkeys monsters months more most mother mountain mountains move movie movies moving much mufasa muggsy mullet murder murders museum music musical musically must mutated mystique nadell nah naked name named natural nature nba near neck need needed negotiate negotiating neighborhood nephew netflix network never new newer newfound newfoundland next nice nicki night nine nintendo nobody nominees north not notcha note nothing noticed november now number numbers observant obviously occurred ocean october off offer offered offering office often ohio oilers okay old older olympics once one ones online only opened opening opposed original other others ouch our ourselves out outer outfit outright over overseas overtime owl own owned paddington page paint painted panda panthers paramount paranormal paris parked parker parking part participated parts party pass past patience patrol pause paying payment peanut peel pegasus penguin penny people perfect perfonger perry person personal personally peru peter phenomenal philadelphia phone phoning photo picture pie pinstripe pixar pixel place plan planet plastic plates platform play played playing playlist playoffs please plugged plunge plus pluto pocket podcast poets point pointed police poop pooped popped popularity positive post posted potential poured pre predator prepared presidential pretty previews previous price prices print pristine private probably problem proceeds process producers production programming project pronounced pronunciation property protected psychotic publish pull pulled puppet puppets put quarry question questioned quick quiet quinn quite rabbit racketeer rafael rain raining raise rambles range rant rapper raps rat ray rays read reader reading ready reagan real realized really rear reboot recall recently record red refresher refs regular reindeer reindeers relative release released releases releasing religious remained remember remind remixes remote remotely renewed rent reservoirs rest resurged resurgence retire retired revealed reviews rewatched rhine ride ridiculous right rights ring rink rival rivalry river road robinson rocky role roll rolled rolling romulus roof room roosting root roughly round route row rugby rule run running rural sabotaging sad safe said sake sales same samples san sat saturday savant save saved saving saw say saying says scam scattered scenarios scene school scoop scores sea season second seconds see seeing seemed seen sees seine sell send sent separate september sequel sequels series seriously set settlement setup seven seventh shaboozy she sheepdog shield shift shirt shit shock shocker shocking shogun shooting short shot should show shows side sign since singers singing single singles sings sister sit sits situation six size skylab slammed slamming slams slapshot slid slightly slim slow smack small smelt snoop society softball software sold solve some somebody someone something sometimes somewhere son song songs sonic soon sorry soulful souped space spanking spanning speaking specific specifically spelled spent spice spider spilled spin spinner spinoff spirit split spongebob sport sports spot square squid squidly squiggly stafford stalking standing stanley staring stars start started starting starts state stay steep stein step stereo stick sticker stickers still stop store stories story straight strand streaming street studio stuff stupid subway such suddenly sued suit summer summers sun sunday sunny super supposed supposedly sure surpassed surprised swear sweet swift swims sydney table take takeaway takes taking talk talked talking tampering tanked tape taylor team tear teddy teenaging television tell telling temperature tend tennis tensor terrible test textiles than thank thanks thanksgiving that the theaters their them themselves then there these they thing things think thinking third thirds thirty this those though thought thousand three through throughout throw tie tight time times timothy tiny tipsy title today toddler together told tom tommy tomorrow tonight too took tool top topic tortured total totally touch toupee tour tournament toward tower town toxic tracker tracks translate traveled treat tried trouble true trust try trying tubi tulsa tumble turn turned twice twist twister two twos uber umorda unattended understand unexplained unforgiving unit universe unknown unnecessary unpause update upset usa use used usually utilized vacation van version very veto victim video videos viewers viewing vikings violent virginia visiting voice volley volleyball voted wait walk walked walking want wanted wants war was wasn watch watched watching water way wear wearing website week weekend weeks weird well went were weren west western what whatever wheelchair when where wherever which while white who whole why wicked wife wiki will winchester window wine winning wins with woke wolfenstein wolverine woman won wondering wooded woodland word work working works world worldwide worn worse worth would wouldn wow wrap writing wrong wrongful yaki yam yankees yash yay yeah year years yep yes yesterday yet yoshi you young youngest your youtube zendaya zero zombie",
+    "hasTranscript": true
+  },
   {
     "id": "19574287",
     "title": "S3 E26 - 1973",
@@ -492,7 +512,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17687234",
+    "id": "17678717",
     "title": "S2 E28 - Weapons",
     "date": "Aug 18, 2025",
     "season": "s2",
@@ -502,17 +522,17 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17652198",
+    "id": "17645181",
     "title": "S2 E27 - I Vant Your Blood",
     "date": "Aug 11, 2025",
     "season": "s2",
     "desc": "Dave donates blood; Pern is in a mood. Blood donation, amusement park fails, 80s rockers.",
     "year": "",
-    "keywords": "abandoning abide ability able about abraham abrahamic absolutely absurd absurdities absurdity abused abusive accepted accident accomplish according account accountability acknowledge acquaintance across act activities activity acts actual actually adam add added addiction adding address adhering administrative admirable admitting adult adulteri adulterous adultery advice affect affiliation affirming affluence affording afghanistan africa after afterlife again against age agency agenda agnostics ago agree agreed ahead alabama alan alcohol alive all allow allowed allows almost alone along already also although always amazing amazon amendment america americans amoebas among ancient and angel angels animal animals annette annoyed annoying annual another answer antelope anti ants any anybody anymore anyone anything anyway anyways apartment apologies apostle apostles apparent apparently appear applaud apple appreciate are area aren arguing argument ark arkansas arm arms army around arrived arsenal article aside ask asked asking aspect assumes assuming ate atheism atheist atheistpodcast atheists atheistville atrocities attempt attendance attending attention august authoritarian authority average aware away awesome back backed background backgrounds bad baddie bag baggage bailiff band bar baseball based bash basic basically basis bat battle battles beach beat beautiful became because become becomes becoming been beer before begging begin beginning behalf behavior behind being beings belief beliefs believe believed believer believes believing belonging bereavement best better between biased bible bibles big biggest bill billion biological birds birth birthdays bit bitter blah blank blends blind blinders blindly blocks blood board boat boils bone book books boost born bosom both bother bothered bottom bought bow boy boys brain brains brakes branch break breakfast breath brian bride brief brimstone bring bringing broach broad broader broken bronze brother brought bruises buddies bueno buff build building built bullshit bunch burger bury bus but butter buying bye cafeteria call callahan called calls calm came camp can cancel cancer cannot capable car card care careful cares carolina carrying case cases categories cathedral catholic catholics cattle causation cause causes causing celebrating center centers centralized centuries century certain chance change changed changing channel chaos chapter character characteristics cheating check checked checking cherry chest chewed chicago child children chipping choice choir choke choking cholesterol choose choosing chose chosen christ christian christianity christians christmas chunk church churches circle city claimed claiming clarence classes classroom clean clear clearly clip close cloths clouds club clue cnn coach codex cold collected collective college colonials colony com come comes comfort comfortable comforting coming commandments comment comments commit common commonplace community company compared compassion compelled complain complaining completely compliant complications computer concerned conform confused connection conservative consider considered constitution consume contact context continue continued contradicted control controversial contusions convention conversation conversion convince convinced cool cop copies coping core corinthians corner correct corrected correctly correlation corruptors couch cougar cougars could couldn council counselor counter country couple couples course covered covering covet cpr crack craft crashed crazy create created creates creating creation credibility credit creed creeping crew critical critically cross crosses crossover crowded crumble crumbling crushing cry cults cultural culture cultures cure cured curious curricula cut cynthia dad damage damaged damn damnation dancing dark data date dates daughter day days dead deal dealt death deathbed deaths deceased deceive decide decision decisions declaration deconstructing deconstruction deep deeper defeated defeating defense defiled defiling define definitely definitive demanded demanding democracy demons demonstrably demos denominations deny depends deported descriptions deserve desire desires desk desperate desperately despite destroy destroyed detail determine determined detransitioned devastation development devil devotedness dichotomy did didn die died dies difference different differentiate differentiation difficult dignity dilute diluting direction directly dirty disagree disaster discomfort discuss disingenuous disorder dispense disputing dissuade distinction disturb diverse doctor doctors document documentary does doesn dogs doing domestic don done door doorstep doubling doubt doug down dozen dozens dragons draw drawing dress drive drives driving drop dropped drowned drowning drug dry dude due dues dumb dungeons during dyed dying each earlier earliest early earned earth earthly easier easy eat eating echo educated education educational effect effed eight either else elsewhere emotional empty end ending endure england enjoyed enough entire entity episode equal equality equally era escape especially essentially established esteem eternal eternity evangelical evangelizing eve even events eventually ever every everybody everyone everything everywhere evidence evidentiary evil exact exactly example executed exist existed existence expect expectations expected experience experienced experiences explain explicitly express expressed extra extremism eye eyes fabrics face facebook faced fact factor factors facts faculties failure fairly faith faking fall fallacies family fan far fashion fastest fat father favor favorite feature federal feel feelings feels felicia felt female feminism fervently few field fifth fight fighting fights figure figureoutable figures filled filling films final finally financial find finding fine fingered finish finished fire firm first fish fit five fix fixing flavor fled flies flip flood floods floored florida fmla focus focusing folks follow following food fooled foot for forces foremost foreshadowing forever forgivable forgive form formed forward fought found foundation founded founding four framework freaking free freedom freely frequently friend friendly friends from front fruit fuck fucked fucking full fully fun functioned funding funny further future gag gaining galaxy gap garbage garrett gas gate gates gave gay gayness geez gender general generation genes genesis genitalia gentile genuine genuinely germs get gets getting girl girls give gives giving glad glare globe goal goat god gods goes going gone gonna good got government grace grade grandmother grandparents grant grasp grateful gravitate gray great greek greeks grew grief grieve grieving grinder grindr group groups grow growing guaranteed guardian guess guest guests guide guilt gun guns guy guys had hadn hair hairy half hand handful hanging happen happened happening happens happier happy hard hardcore harder harlot harm harmful harms has hasn hate have haven having head heads heal healing health hear heard hears heart hearted heathenize heathens heaven hebrew heckling hegseth heimlich held hell hello help helped helps her herder here hers hey high higher highest hijab hilarious him himself his historian history hit hitchens hits hold holding holy home homeschool homeschooled homeschooling homosexual homosexuality homosexuals honest honestly hook hooked hope hoped hoping horrible horror horse hospice hospital hospitals hot hour hours house household housework houston how however huge human humanism humanists humanity humans hundreds hurt hurtful husband hydration hypocrisy hypocrites ick idaho idea identify identity idiot ignore ignores illegally illinois illiterate images imagine imbalance immediately important impose inaccurate inanimate incidentally includes inconvenience inconvenient incredible indebted independence individual individuals indoctrinated infantry inflicted influence information insane insects inside insidious instagram instantly instead instincts instructions insulting insurmountable intention intentioned interact interacting interaction interesting interestingly interests intermittently internet interviews into invalidated invented involve involved involving irks ironically islam isn israel issue issues its itself jail jailed jailer jainism jamming january jehovah jesus jewish jews jfk job jobs john join joining joke joking jones josephus journey judaism jump jumping just justify keep kept kettle key kicked kicking kid kids kill killed killers killing kind kindergarten kinds king kingdom knees knew know knowing knowledge known knows kodak koitai krauss labels lack ladies lady lands larry last later laughing law lawrence laws lax layer lead leaders lean leaning learn learned learning least leave leaving lebanon led left legal legislate legitimate legitimately legs lesbian lesbians less lesser let lethal lets letter letting level leviticus lexicographical lgbtq lgbtqia liberal lie life lifestyle like likely lilith limited limiting line lines lions list listen listeners listening literal literally little live lived lives living loaded loathe locally logic logical long longer longest look looked looking looks loop lord lore lose losing lost lot loud love loves low luck lungs lying machine mad made magic magical magnification main majority make makes making male mammal mammalian mammals man maneuver manhole manipulate many maps marines mark marker markers marriage married marry massive master matter matters may maybe mayflower mean meaning meaningless means meant meantime media medical meeting meetings meetup meetups members memories men mentality mentioned mess met metric mic might mike military millions milwaukee mind minded minds mine minimize minority minute miracle miracles miraculous miscreants misfits misgivings missed mission missionary missouri mistaken mistranslated mistranslation mixed mom moment money monolith month months moral morality morbidly more mormon mormons morning morons mortality mosaic mosque most mostly mother motley mouths mouthy move moves movie moving much muhammad multiple mundane murder murderer muslim must myself mysterious mystic name named narrow narrowed nat nation national nationalism nationalist nationalists natural naturally necessarily need needed needs neglect neighbor neighborhood nephews netherlands never new news next nicaea nice nicene nieces night nipples nix noah nobody non none nonetheless normal norms north not note notes nothing notice noticed now nowadays number numbers numbing nuns nurturing obama obedient obese objects obtain obviously occurred off offending offense offensive office often okay oklahoma old older oldest once one ones only onus open opening opinions opportunities opportunity opposite option options order organisms organization organizations origin original originally orthodox other others otherwise our ourselves out outcomes outside over overall overcome overlap overstayed overturn own ownership oxygen paid pain pairs pancake panic parallel parent parental parents parishioners part participation particular particularly parting partner partners parts party pascal passages passed past pastor pastors path patriarchal patriarchy patrick patterns paul pay pearly pedal pederasty pedestal pee pendulum pensions people per perceive perception perfect perform performed perhaps pericope period periods persecute persecution person personal personality personally perspective perspectives pete petitioning phase philosophy phone physical pick picking picture pictures pilgrims pillage pisses pissing place places plagues plan planet planting platitudes played playing please pleasure plethora plug plummeting plus podcast point pointed points poisons poked poo poor popular porn portraying posed position positive possessing possible possibly post posting pounds power powerful powers pragmatic pray prayed prayer prayers praying pre preached precisely predatory premarital premises preparing prepubescent present presents president pressure pretend pretending pretty prevention priest primarily print prison private privilege prize pro probably problem proceeding process proclivities production professionals professor profile pronounced property prosecute prostitute protect protecting protection protections protestants proto prove proves psychological pubescent public publicly pulled punishment pure purely purity purport purportedly purpose purposes push pushed pushing put putting qualifications qualified qualifier quantify queen queer question questioned questioning questions quick quickly quorum quote quran race rags raise raised raising rampant ran randy ranting rape raped rapture rates rather raving reach reached reaction read reading ready real reality realize realized really reason reasoning reasons rebound rebroadcast received recent recently recommend record recovering red reddit reflect reflects reframe regard regardless regular regurgitated rejecting relationship relationships relatively relatives relearn released religion religions religiosity religious remember reminds removed repent replay reposted representative representing republic republican republicans research reserved respectful respectfully respond responding response responsibility rest restart restaurant restaurants rests result retirement revelation ride ridiculous ridiculousness right rights rippling rise risen risk road roe rogue role rolling romans room roots round roundtable rsv run running sad safety said same sample sarcastic sat satan savage savagely save saving saw say saying says scale scholars school schooled schools scientists score scott scourge screen screw scripture searching second seconds secretary section sects secular secularists see seeing seems seen sees segue self send sense sentence separate serge sergeant serves set seven several sex sexual sexuality shall shame share shared shares she sheep shepherds shirt shirts shit shocked shop shortened should shouldn shout shouted show showed shows shunning sibling siblings sick sickening sickens sicko side sides sideswiped sign signaling significant silent silly simple simply sin sinaitis since sincerely singles sins sitting situation situations six slavery sleep slightly slow slowly small smart smited snatch snuff soccer social socializing societal society solid solve solves some somebody somehow someone something sometimes somewhat son soon sooner soothing sorry sort soul souls sound sounds south southwest space spaces spartans speak speaker speaking special species specific specifically speed spelled spellings spending spent spirit spot square stages stake standard standards standing star start started starting state stated statement states stay stds steak steal step stepfather stepmom still stone stop stopped stories story straight strange strangle strangulation street streets strength stressed strong struck structure struggle struggling students studio study stuff subject submissive subscribe subset subsets suburbs success succinct such suck sucks sudden sugars suicide summer sun sunday sunk super support supposed supposedly supremacy sure surely surgeries surgery surprise surrendering survive survived survivor survivors sussing sway sweet swinging symbol synagogues system table take takes taking talk talked talking talks tank tastes taught teach teacher teachers teaching team teenager teens tell telling tells tempt tempted tempting temptresses ten tenets tennessee term terms terrible terribly terrorist testament tested texas text than thank thankfully thanking thanks that the their them themselves then theo theocratic therapist there therefore these they thing things think thinkers thinking thinks this those though thought thoughts thousands three throat through throughout throw throwing tied tiktok time times tiny today together told tomb tonight too took tool tools topic tornadoes totally touched toward towards town traditions train training trans transfusion transgender transition translation transsexuals trauma traveled treated trending trends trial tribes trick tricked tried tries triglycerides trivial trivialize trouble true truly trump truth try trying tuning turn turned turns twist two type types typical typically ultimately umbrella uncle unclean uncomfortable under understand understanding undocumented unfriended unholy united universe university unknown unless unnatural unscathed until unwire upbringing upon upsetting usage use used using usually utah uttered valid various vast vaticanus vehemently veil verse version very vicariously victoria victorian video view viewers views violence virginity virtue visa voices void voltaire volvo voted vouchers wager wait waiting walk walks want wanted wants warrant warrants was washington wasn watch watched watching water way ways wear wearing wedding weddings week weekend weeks weight weird welcome well wellness went were weren what whatever whatsoever when where whereas wherever whether which whichever while white who whole whose why wide widely wife wigs wild wildlife will willing wilson win window wings wish with within without witness witnesses woman womankind women won wonder wonderful wonderfulness woodwork wool word words wore work worked working works workshop world worldview wormhole worried worry worse worship worshiping worst would wouldn wow wrap wrestle writing written wrong wrote xyz yard yeah year years yes yesterday yet yoga you young younger your youtube zero",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "17612345",
+    "id": "17605662",
     "title": "S2 E26 - The Foodie Episode",
     "date": "Aug 4, 2025",
     "season": "s2",
@@ -522,7 +542,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17578901",
+    "id": "17561281",
     "title": "S2 E25 - The Weird Al Episode",
     "date": "Jul 28, 2025",
     "season": "s2",
@@ -532,7 +552,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17545678",
+    "id": "17527383",
     "title": "S2 E24 - Anatomy of a Pool",
     "date": "Jul 21, 2025",
     "season": "s2",
@@ -542,17 +562,17 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17512345",
+    "id": "17401764",
     "title": "S2 E23 - 28 Minutes Later",
     "date": "Jun 30, 2025",
     "season": "s2",
     "desc": "Theater review of '28 Years Later' with movie trailers and Nintendo Switch 2 discussion.",
     "year": "",
-    "keywords": "abbouchi able about absolutely accelerating access accomplishments accountability accountable achievement acknowledgement acquired acquisition across action active activity actual actually additional address addressing adjustment admiration adopt adopter adopting adoption advantage advice after afterthought again against age agile agilemanagementoffice ago agree agreed agreement ahead air aligned alignment all allocated almost along already also always amazing ambassador america amo amount amounts analysis and annum another answer any anyone anything anywhere appears application applies apply applying appreciate appreciative approach approaches are areas aren argue armed around article ask asked asking assigned assume attack attention available aware away babies back background backgrounds backing bad bags bank banking bas base based basic beautiful became because been beer before behave behavior behavioral behaviors behemoth behind being believe belt benefit benefits best better between biased big biggest billion bio bit bite black blue board boards bodies book borders boss bottom bought boy brag brainstormed branches brand bread break bridges brightest bring broad brought budget building burnt business but cadence calendar call called came camps can candid capabilities capability capacity care career carryover cascade case catalyst catch cause causes center centers centric centricity ceo certainly certifications cetera chain challenge challenged challenges champions change changes changing charter check checklist chief cities clarity clash class clear clearly clock closed cmo coach coaching coalition coaster coe coincidentally coined collaborating colleagues collective com come comes coming common commonly comms commute companies company competition competitive completely complex complexity compliment complimentary component concentrated concept conceptual conceptually concerns condition conflicted connected constantly consultant consultants consulting content contests context continue continuing continuous continuously contribute contributions conversation conversations convincing cool copy core corporate corporation correct cost could couldn counsel couple course cover covid crazy create created creating creatures creep critique cross cultivating cultural culture curiosity curious current curve customer customers cycle dangerous data date day days dead deal debating decade decision decisions dedicated deep deeper defined defining definitely definition deliverable deliverables delivered delivering delivery demonstrating department dependent depending deployed described developed developing development diagnosing dialogue did didn difference differences different difficult dig digital diminishes direction disciplines disconnected discover discovers discovery discrete discussion displayed dive division doer does doesn dog doing dollars domain don done doubt down dramatically draw draws drive driving due during dynamics each ear earlier early easiest easy ecosystem editorial educating effective effectively either elements else embarrassed embedded embrace embraced emotions emphasis employee employees enable enabler enabling encourage end ended energy engage engaged engineering enjoyed enough ensure enterprise entrepreneurial entrepreneurship entry environment environments epiphany episode epmo epmos equally error especially etc europe evaluating evaluative even event ever every everybody everyone everything everywhere evolve evolved exact exactly example examples excellence excited exciting execute execution executives existence existent existing exists expanding expect expected experience experienced experiences expert expertise experts exposing extended external eye facilitate facing fact factoring facts fail failing failure faith fall falling familiar fan far fast fatimah favorite fear fearful feedback feel feeling feelings feels female fence few fields fighting figure final finally financially find finding fine firm firmly first fit fits five fix flaws flexibility fluffy focus focused folks follow followers following follows fomo for forethought forget forgotten form formal formulated formulation forth fortune forward found four france frankly frequently friend from front frontline full fun function functional functions fundamental fundamentals funding furniture futuristic gained gap gaps garnered gave gears general generally generic genuinely get gets getting giacalone give given gives glad goal goals goes going gone good got governance grab granted great groups guess guilt guise gut guys had hand handle hands happen happened happening hard harder harmony harness has hashtag hasn have haven having head headcount heading health hear hearts heck help helped helpful helps here hey high highly him hire hit home honest honestly hope hoping host hosted hot hour hours house how human humanity humans hundred hunter husband hypothetical idea ideas imagine immensely impact impactful implement implemented important impossible improve improvement improvements improving inability include incredible index indexing individual individuals inefficient inflection influence information infrastructure initiatives inside insights inspired instead instinct integrated integrating integration intention interested interesting intervene intervened into intuition invest investment inviting involved isn issue issues itself job jobs join joining joins journey judgment jump just justified keen keep kellogg key keyboard kick kid kind knew know knowing knowledge knows landed large larger last late lately later lead leader leaders leadership leading leads leak leap learn learned learning learnings least led left legitimate less lesson lessons let level leverages leveraging life lifetimes like likely likewise limited limiting limits linkage linkedin listen listeners listening little live lived loaded local log logging logistics long longer look looking looks loot lose lot love loved loves low made majority make makes making manage management manager managers managing mandate mandatory manufacturing many map market marketing massive matter matters mature may maybe mbas mcdonald mean meaning means measure measuring media meet meeting mega member members mental mentioned mentoring merged methodology metric metrics mid middle might million millions mind minds mindset mindsets minimum minute misconstrue missed missing missions mistake mistakes model modify mom moment moments money month months more most mostly much multiple must mutual name names nat naturally nature near necessarily need needed needs neglected never new news newsletter next nit nobody non none nonstop not notes nothing notion now nuance number numerous objective objectively observe observed obviously off offered office officer officially often okay okrs old once one ones only open operating operational operations opportunities opportunity opposed optimal option organization organizations organize organized oriented originally other others otherwise our out outcomes outlook outside over overall overanalyzing overhead overwhelmed own page painful paper parse part particular particularly passing passion passionate past path patience patients pay peer peers people per percent perfect performing person personally perspective philosophy phone phrase pick picture pie piece pile pivot place places placing plan planning plans play playbook plays please pleased pmo pmos podcast point ponder poor pop portfolio portion positioned possible post postco posts potent power powerful practical practice practices presented pressure pretty prior priorities prize proactive proactively probably probe problem problems process processes proclaimed product professional professionals program programs progress progresses project projects proof provided provider providing publish pull purpose purposes push put putting quality quantify quantitative quarter quarterly quartile question questionnaire questions quickly quite quo rails range ranges rank ranked rapidly rate rates rca reach reached react read readiness ready real realize realized really rearrange reason receive recent recently recommend reconciled recording red reduction refer reference referencing reflect refresher refreshing regardless reinforcement related relates relationships reliant rely remember renee rep replaced reporting rescue resources respect respond responsibility rest restless restructure result results retain retains retrain return rhythm rhythms rid right rings risk risks rival robots rock role roles roll roller room root routines rsgconsultinggroup rule run running sad said sales same sat saw say saying says scale scenarios school science scientific scope scratching script second secondary see seeing seem seems seen seize seldom self sell send senior sense sentiment serious service sessions set setting sexy shaming shape shaped share shared sharing shift shocked short should shoulder show showcase showing side sigma significant silo siloed similar simple simply since single sins sit sits situations six size skill skilled skills sky slash slave sledgehammer slightly slower small smart social soft sold solid solo solutions solve solved solver solving some somebody someone something sometimes sorry sort sorts sounds space speak speaking specialist specializes specifically speed spend spending spent spirited sponsors sponsorship spot stack staff stand standard start started starting starts state statement states status stay steal step still stoke stories story straight strategic strategies strategy strength strong structure struggle stuck studies stuff style subject submit substack succeed successful such sudden suite summertime super supplement supply support supporting supportive sure surveys swat symptoms system take taken takes taking talent talented talk talked talking talks tandem tangible taught teach team teammates teams teasing technique techniques technology tell telling term terms tested than thank thanks that the their them thematically themes themselves then there therefore these they thing things think thinking third this those though thought thoughts thousand three through thrown tick tie time times tired tiresome today together toll tomorrow too took tool tools top topic topics tos totally touch towards track traction traditional trained training trait transcript transformation transformations translation transportation true trust trusted try trying turf turning turns two typically unambiguous unbiased unclear under underneath understand understands undervalued undo unfair uniquely united unstuck until upfront upon upsell upskill upstream usage use used users using usually vacations valuable value variability vary vast vendors versus very via view viewers views virtually visual wait walk walked walking wanderlust want wanted wants was wasn waste wasted wasting watershed way ways webinar website week weekly weeks welcome welcoming well were weren what whatever when where whether which while white who why wide will win window wisdom wise with within without witness won wondering work worked working works world worse would written wrong www yeah year years yellow yes yet you younger your yourself zooming",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "17478901",
+    "id": "17362591",
     "title": "S2 E22 - Cones",
     "date": "Jun 23, 2025",
     "season": "s2",
@@ -562,7 +582,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17445678",
+    "id": "17320449",
     "title": "S2 E21 - Joanne is BACK!",
     "date": "Jun 16, 2025",
     "season": "s2",
@@ -572,17 +592,17 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17412345",
+    "id": "17288221",
     "title": "S2 E20 - Cream Soda Anyone???",
     "date": "Jun 9, 2025",
     "season": "s2",
     "desc": "Sugar high! Pern's son joins for a cream soda taste testing segment.",
     "year": "",
-    "keywords": "ability able abnormal about absence absolutely absorb accepted across activation activity actually add addiction address addressing adequate administer admire admit adrift advanced advice affect affecting affective affluent afraid after again aggressive ago agoraphobia ahead ailment air alert alerted alerting alive all almost alone aloneness along alpha already also alter always amelioration america american americans amongst amorphous amounts amygdala ancient and another answer anti antidepressant anxiety anxious any anybody anymore anything anywhere apathy appear appeared appears apply appreciate appreciating are area aren around arrival art artful article articles asked asking assessment assured atrophied attack attacks attention aversive aware away awful back bacteria bad bag balance barista based basis basket bathing beautiful because become becoming bed been before beget begin beginning begins behooves being beings belief believe believer bent berktoff berridge best better between biased big bigger biobehavioral biological bit blind blown blue bodies bold books boredom both bowling boy brain breaking bring bringing brings broader broken brought brush build bunch burgeoning bursts but buy call called calling calorie came can cannot car cardiologist care carefully caress cars case catastrophic cause causes centuries certainly challenge challenges change changed channels character characteristics chat check chit choose cigarettes circadian circle circuit circuits citation citations cite citizen clear clearly clients clinic clinical clinically clinician clinicians clinics clubs cognition cognitive cohesion colleagues come comes coming commendable comments commercial communication community compared compilation complete completely concentrate concept conducted connected connection consider considerable consideration consistently constitutes contact continue control conversation conversing copy copyright cornerstone correction cortex could couldn countries country course cover create created creates creatures criteria cross curious currently damages data day deal dear decades decluttered decluttering deep deeper deepest deeply default deficit deficits define defined defines definition degree degrees demetanere deny dependent dependently depending depressed depression depressive depth describe description deserve deserves designed despair desperately despite develop developing devote diagnosis diagnostic did didn diet different differently difficult digital dilip diminisher diminishes directly disaster disconnected disconnection discuss discussed discussion disease diseased disorder disorders disrupt dive does doesn doing don done door dopamine dose down dramatic drawn drink drive driving dropped dsm dysfunctional dysthymia each easiest easy eat effect either elements elevating eliminate eliminated elimination else embrace emotion emotional emotions emphatic employ empty encourage end endocannabinoids endocrinology endogenous engage enhancer enhancing enjoy enjoyed enormously enough enthusiasm enthusiastically entire entirely entirety envy epidemic episode esoteric established europe evaluation even ever every everybody everyday everything evidence evidently evolved exact exactly examination examined example exceptionally excited exercises expand expanded expect expertise explore exposure extremely eye eyes face faced faces facing fact facts faded fair familiar family fantastic far fasting fatigue fault fear fears feel feeling feelings fell fellow felt festering few field figuratively finally find finding findings fine first five fix fixing flat flowers fmri focus focused folks following food for forest forget forgive formal found four fourth free friend friends friendship from fruitful fulfillment functionality functioning further future gaba gad gamma gap gardening general generalized generally generate generated genesis gently genuine genuinely get getting give given gives glad glutamate goal god goes going good goodbye got gotta grab grateful gratitude great greater greenberg greenery ground group grow guess guys had hand hanging happen happiness happy hardly has have havea haven having heads heal healing health healthy hear heart heartbreaking hearts heck hedonic hello help helped helpful helping helps here hero hesitantly hey hidden hide high higher highlight hiking hippocampus hit holistic home homes honestly hope hopefully hopeless hoping hotspots how however huge human humans hygiene hypotheses ignored illness imagine imaging imbibing immediately impact impactful importance important importantly impressive improve improved improvement improves improving incorrect increasingly incredibly indeed individuals inflammation inflammatory information initially inquire inspiration intentional interact interaction interest interesting interestingly interferon intermittent international interspread intertwined intervening intervention interventions into intrigue intrigued involved involving ipad iphone irritability isn isolated issue issues items its jain japan jealous jealousy jeopardy jeste jin joining journal journey joy judo just keep key kind kindly kinds know kringlebach laid land landscape laptop large last later learn learned least leave leaves left leg leisure less let letter letters level levels lies life lights like likely likert limited link list listed listen listeners listening lit literally literature little live lives living localize logic loneliness lonely long longer longitudinal look looked looking looks loss lot lots loud love lovely low lower lunin macro macrosocialization made major make makes male man manic manner many mark master matsunaga matter matters may maybe meaning meaningful measure measured measurement measuring media medical medicine mediterranean members memory menezes mental message micro micronutrients microsocializer middle might mild millions mind mindfulness minds minute minutes misery missing mistake mode moderate modern mold moment monolithic mood more morning most motivated move movement much multiple muscle must myself narrow narrowed nation nationwide nature nearly nebulous need needed needs negative negativity neither netherlands network neurobiological neurobiology neurology neuron neuroscience neurosciences neurotransmitter neurotransmitters never news next nice nine non nor not notes nothing notion nourished nourishment novelty novo now number nutrition obesity objective obvious obviously offer offered offering often okay older once one only open opening operationalize opioids opportunity oprah optimism optimistic optimized optimum orbital order organ organized organs original originated other others otherwise our ourselves out outside over overactive overactivity overhaul overload own paid pan pandemic panic paper part participants particular particularly parts past pathogenesis pathology pathways patient patients pattern peace people perceived perception perfect perform perhaps permit persistent person personal personally perspective phone photos phrase physical pick picked picking place plans plays please pleasure pleasures plos plus podcast point poor pop pose positive positivity possible possibly postered practical practice practiced practices pray prefrontal prescribe prescriber prescribing presence presented pretty preview previous primarily primary prime privately probably problem problems professional professionally profound profoundly progress prominent promote promoting proposition protected provide providing provoke psychiatric psychiatry psychology psychopathology psychopharmacologists psychopharmacology psychosocial publicly published pulled pulling purpose push put quality quantity question quick quiet quieter quite radically rakesh rapidly rather reach reached reaching reacts read reading real realignment reality really reason reasons recall recap received receptive recipe reclaim recommend recommended recommending reconnecting recurrences reduced reduction references referencing regain regarding regions regular regulation rejected relapses relationship relatively relentlessly relevant religious remember remind reminded reminding removed repeat report reported reporting require requires research researcher researchers researching reset resilience resilient resonate resonated results review rewilding rhetorical rhythm rid right rises risk road role room sad sadness said sake same sand sandra satisfaction satisfied saw say saying scale scheduling science sciences scientifically screen second section sectional see seeks seem seems seeped self seminal sense separate serotonin set sets settle severe shall shape share shared sharing sharply shift shifts shoes should show showed showing shows significant simply single sitting situation six skill slap sleep slightest small smell smoking snapshot social socialization society solid solitude some someone something sometimes somewhat sorry sort sounds source speaker speaking specialty species specific spectacularly spend spending spinhoven standard starbucks start started state statement states stay step still stimuli stipulate stool stop store story strategies strengths striatum striking strong strongly structure struggling studies study succeed succeeded such suffer suggest suggestions summarize sunshine supporting sure surgeon surprise surprisingly survey survive symptom symptoms system take talk talked talking talks target targeting teach teachers techniques tell ten tend tenets term territories than thank that the their them themselves then therapists there therein these they thing things think thinking third this those though thought thoughtful thousand three thrilled thrive thriving throes through time tiny tired today together told tomorrow too tools top topic totally touch tough towards toxin traditional trait traits travel travelers treat treatments tree trees trend trends tribe true truly tuned two uncertain under understand understanding understood union united until use used using utilize validated validity valuable value various ventral venture version very view viewed virus vitality wake walk walked walking walks want wanted warriors was wasn watching way ways welcome well wellness wellnesses were what whatever when where whether which while who whoever whole why will win winding wishful with wonder wonderful word words work worked working world worry worse worship worth worthy would wound wow wrap wrinkle write wrong yang yeah year years yep yes yet you your yourself zero zimmerman",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "17378901",
+    "id": "17241470",
     "title": "S2 E19 - Pop Tart Ice Cream",
     "date": "Jun 2, 2025",
     "season": "s2",
@@ -592,7 +612,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17345678",
+    "id": "17210446",
     "title": "S2 E18 - The Joanne From Texas Episode",
     "date": "May 26, 2025",
     "season": "s2",
@@ -602,7 +622,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17312345",
+    "id": "17162267",
     "title": "S2 E17 - Marshmallow Mouth",
     "date": "May 19, 2025",
     "season": "s2",
@@ -612,7 +632,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17278901",
+    "id": "17117895",
     "title": "S2 E16 - Bad Bird Impersonations",
     "date": "May 12, 2025",
     "season": "s2",
@@ -622,7 +642,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17245678",
+    "id": "17074004",
     "title": "S2 E15 - Don't Milk Your Neighbors Cow",
     "date": "May 5, 2025",
     "season": "s2",
@@ -632,7 +652,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17212345",
+    "id": "17035271",
     "title": "S2 E14 - A NEW Car",
     "date": "Apr 28, 2025",
     "season": "s2",
@@ -642,7 +662,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17178901",
+    "id": "16993569",
     "title": "S2 E13 - Taxes R Us",
     "date": "Apr 21, 2025",
     "season": "s2",
@@ -652,7 +672,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17145678",
+    "id": "16963288",
     "title": "S2 E12 - Moving Day",
     "date": "Apr 14, 2025",
     "season": "s2",
@@ -662,27 +682,27 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17112345",
+    "id": "16915607",
     "title": "S2 E11 - The Serious Episode (April Fools!)",
     "date": "Apr 7, 2025",
     "season": "s2",
     "desc": "We promise no jokes this week \u2014 which isn't hard since we're not that funny anyway.",
     "year": "",
-    "keywords": "ability about absolute accordingly across actually addiction advice affect after again agree align aligned aligning alignment all allow allowing allows almost already also always amount analysis and angel angels animal animals another ante anxiety any anybody anymore anything anyway apologize approaches are area aren around asana ask asking asleep aspects attachment audience authentic authentically awake aware awareness away back bad based basically bead beads bear because become becomes been before beginning begins being beings beliefs believe believing beneath beside best better between bit blend bodies body born brains breath breaths bring broken brokenness brought built but bypass call called calling came can card care carry carrying case cassie centering certain challenge challenges change changed changes character chatter chattering children choice choose choppa clarify class classes clear click closely closer coach com come comes coming compassion concentration concept concerns conditioned conditioning conditions connect connecting connection connotation conscious consciousness considering constant consult content continue contribute contribution control conversation conversations convolution cornerstones costs could couldn count course create created creation creep crown curious dalton damaged darn day decide decided decision decisions deck decks deep deepen deeper deepest deeply definitely deny designed desires devastating develop development develops diagnosis did didn different differently digits direct disconnection discover dismissive dissolves distracted disturbed dive divine does doesn doing don donation done doubt down draw driveway driving dual each earth edta ego egoic eight either else embodied empowered empowering empowers enable end energy engaging enough envision episode episodes especially essence even events ever every everyday everyone everything exactly excitement exercise exhale expand expanded expansion experience experiences explain explore express eyebrows eyes face falsely familiar fan far favorite feed feeding feel feeling felt few final find finding fingerprints finished fire first five fix fixed fixing flip flow flowing focusing follow following food for forehead found free friend from front full fully further future gave general gently get getting gift gifts gimme god going gone gonna good got gotta gratitude great greater grief grounded grow growth guide guidelines gut guys habits had hands happen happened happening happens happiness happy hard has have haven having head healing health healthier healthy hear heartedness heavier heaviness held hello help helped helping helps her here herself higher hold holding holistic home honest honesty hope how however human hurtful husband hydration idea ideas illusion impact important increasingly india indication individual individuals informational informed inhale inner inside insights inspiration inspire instead institutions instructor intelligent intention intentional intentionally intentions internal interpretation interpretations into intuition intuitive invitation invitations invite isn issues itself japa jealousy joining joppa journal journaling journey joy jump just justify kali keep keytones kind know knowing knowledge knows label last layers leads leaned leaning learn learned learning least leaves lens let level life lifetime lights lightworker like limbs limiting link linked list listening little live lives locus logic long longer look looked looking lot love maass made magic mailing make makes mala mantra mantras many matter maybe mean means meant meat media meditate meditation meditator meeting meets melting mental mentally mention message messages might mind mine miss mission modern moment monkey monthly more most mouth move movement moving much myself namaste name nature necessarily necklaces need needs negating negative neglect nervous never new next noise non none nose not notes now number numbers nutrition observe obstacles obviously off offering officially offset often okay once one only open opening opportunities option oracle order other others our ourself ourselves out outcomes outlines over own page pain palm parenting parents parked part particular passionate path pause people person persona personal perspective pet philosophies physical physically place placed play playing please podcast point points pose poses possess possible post pour power powerful practice practices practicing prayer prayers present presenting pretty private probably problems producing professional profound programmed programming proof proper prove provide psychology pulled purify purposes push put qualified questions quick quiet quite quote random randomly rather reach read reading readjust ready real realign really reason receive received recently reciting recognize recognizing reconnect recorded reflect reframe regulate reiki reinforce rejected relationship relationships release religious remember remembering remind repeat repetition repetitions resisting resonate resonated resonating respond responses rests return returning right running safe safely said same saw say saying schedule science scrolling search second see seen self send sensation sense senses serious serves set sets settle shakti shaped share shared shed shift short show side sign similar simply since sincerity single sit skull sleep small social societal society soft solving some somehow someone something sometimes sort sorts soul souls source space speak speaking special specific spirit spiritual spirituality spiritually spot sri standing start started stay step steps still stop striving stronger student studied study style styles subscribe substitute such suffering suits support supportive sure surface surrendering survive sweet symptoms system take taking talk talked taught teach teacher teachers teaching teachings telling term than thank thanks that the their them then there these they thing things think thinking this those though thought thoughts three thrive through throw time today together topic transform transmute trauma traumatic treatment trend tried true truly trust trusting truth try trying twisting two type types typically ultimately uncomfortable uncover understand unfolding unique unquote until unworthiness unworthy update upon use using validate validation value values very vessel vibrations vocabulary wait wake walk walking wanna want wanted wants was watching wax way ways wear week weight welcome well wellness were western what whatever when where which while who whoever whole wholeness why will win wisdom with withdrawal within without word wording work worked worker works world would writing written wrong wrote yes yoga you your yours yourself",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "17078901",
+    "id": "16868496",
     "title": "S2 E10 - You're My Bautista Friend",
     "date": "Mar 31, 2025",
     "season": "s2",
     "desc": "Entertainment news, box office numbers, and trivia about filling the Grand Canyon.",
     "year": "",
-    "keywords": "able about absolutely accident acclimate action actual actually adjustments advice after again air all almost already also although always amazing amount and announcing another any anybody anything anytime appreciation approximately apps are arms around ask asleep associated atomic attack auto available awesome back bank banking banks basically beautiful because become been before behind being believe belle belt best big bike bill bit blew blowing booth borrow both bottle braking break breeze bring broke broken bucket buddies build building bumped bunch business busy but butler butts cadillac call camaraderie came can car career cars catch caught center certain challenge challenges champ charge chased chassis cheap checkered checking chris circle clamp class clean clear close coaching come comes comfort coming commercial complex condition conditioning connections consistent continue cool coordination corners corvette could couple course cover coverage cranked crazy culmination dad darkness day daytona deal deep definitely degrees dialed dice did didn difference digits dillon dive dodge does doesn doing don done double down downforce drink drive driven driver drivers driving dropping drove dude during dylan earlier early easy eat education either else encouraging end endurance enjoy enjoyed enjoying enough entourage entry environment environments episode eric especially etc even evening ever every everybody everyone everything everywhere excited expectations expecting experience eye eyes fabrication face facebook faces facility facts falling familiar far fast faster fastest favor feel feels felt few field fifth fighting finally find finding finish fire first fit five flag florida folks follow following food for fortunately forward franz friends from frustration fuel full fun further fuze garage gates gave get gets getting give gives giving glad goal goals goes going gonna good goosebumps gorgeous got gotcha grab gratifying great greater green grid ground group grow guess guesses guys had half hand handed handle handled hanging happens happy harbert harbor hard has have haven having heading hear heard hearing heck held help helped helping here hey high him his historical hit holes hometown honestly hope hopefully hoping hot hour hours how huge illinois important impressions impressive incident incidents indianapolis individuals infield initial initially insane inside insight instagram international interview interviewed interviews intimidating into invite involved isn issues itself jack jam jazzed jeremy jim job joe joined journey jumped just keep keeps kept kicking kid kind know kyle laid lamar landed lane lap laps last late later lay leak learn least leave led left legendary legends less let level levels lie lifetime light lights like line list listen listening lit literally little live lmc loading long look looking looks lot lots low lucas luck lucky luther mainly make makes making man many mark matt maybe mean meantime mechanical mechanicals media meeting memories mental messy microphone might mind mindset mine minor minute mirror mirrors mister moment money more morning most motor motorized motorsports much myself name narrower nascar neon neons nervous never new next nice nick night nights nine nolan none normal not notes nothing now number obviously off offs offseason ohio oil once one only open opportunity organize organized other our ourselves out over own pace palm park parking part pay people perfect persevered personal perspective phenomenal pike pinch pit pits place places plan planned plenty plus podcast point points portion practice preference prep prepare prepared prepped pressure pretty previous probably problem proud pull pulling push put putting question quick quickly race races racetrack racing rad radair radio raises ran rate reactions ready real realize realizing really rear recent recommend record red reference regular relatively remember rental reporting research rest rested ride rider right road robbins rods rolex roll rolled rolling rome ruby run running safe said sam same say says scale scared school season seat seats second security see seeing seen sending sessions set setting seven severe shape shaped share shift shoe should show sim simple sims simulation single sit sitting sleeves smiles smooth some someone something sometime sometimes somewhat soon special spectator speed speedway spent splash sports spot spotters staff stalls stand standing stands start started starts stick still stint stints stone stopping store story straights stranger stream street strive studio stuff suit sunny sunset sunshine super sure surface surreal swivel take taken team teammates teams tech teched tell ten than thank thanks that the their them themselves then there these they thing things think thinking this those though thought three through throw tidbits tight time timeline times tire tires today together tomorrow too took top tough tow towed track traffic training travel traveling trees trip trips truck truly try trying tumble tunnel two under unfold unfolds unfortunately upgrades variety vehicle very vicariously videos virtual wait waiting walked wall want wanted wants was wasn watch watching water watkins way weather week weekend weekends weight welcome well went were what whatever whatnot wheel when where wherever whether while who whole wide wild will windy winter wire wise with without won work working world worse would wouldn wrap wrong yeah year years yellow yes yesterday yet you your yourself youtube zero zones",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "17045678",
+    "id": "16833478",
     "title": "S2 E9 - 'Memba This??",
     "date": "Mar 24, 2025",
     "season": "s2",
@@ -692,7 +712,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "17012345",
+    "id": "16784239",
     "title": "S2 E8 - Flying Car or Teleport?",
     "date": "Mar 17, 2025",
     "season": "s2",
@@ -702,7 +722,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16978901",
+    "id": "16763665",
     "title": "S2 E7 - And the Oscar Goes to...",
     "date": "Mar 10, 2025",
     "season": "s2",
@@ -712,7 +732,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16945678",
+    "id": "16713050",
     "title": "S2 E6 - Sick",
     "date": "Mar 3, 2025",
     "season": "s2",
@@ -722,7 +742,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16912345",
+    "id": "16674046",
     "title": "S2 E5 - You Take The Lead",
     "date": "Feb 24, 2025",
     "season": "s2",
@@ -732,7 +752,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16878901",
+    "id": "16630216",
     "title": "S2 E4 - The Valentine's Day Episode",
     "date": "Feb 17, 2025",
     "season": "s2",
@@ -742,7 +762,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16845678",
+    "id": "16586809",
     "title": "S2 E3 - Carrey On My Wayward Son",
     "date": "Feb 10, 2025",
     "season": "s2",
@@ -752,7 +772,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16812345",
+    "id": "16502229",
     "title": "S2 E2 - My Dog Ate My Spatula",
     "date": "Jan 27, 2025",
     "season": "s2",
@@ -762,7 +782,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16778901",
+    "id": "16420067",
     "title": "S2 E1 - Post Holiday Slump",
     "date": "Jan 13, 2025",
     "season": "s2",
@@ -772,7 +792,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16745678",
+    "id": "16386036",
     "title": "Ep50 - The New Years Episode",
     "date": "Jan 6, 2025",
     "season": "s1",
@@ -782,7 +802,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16712345",
+    "id": "16349872",
     "title": "Ep49 - Christmas Wrap Up!",
     "date": "Dec 30, 2024",
     "season": "s1",
@@ -792,7 +812,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16678901",
+    "id": "16322874",
     "title": "Ep48 - The Christmas Episode",
     "date": "Dec 23, 2024",
     "season": "s1",
@@ -802,7 +822,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16645678",
+    "id": "16280431",
     "title": "Ep47 - Grown Up Christmas List",
     "date": "Dec 16, 2024",
     "season": "s1",
@@ -812,7 +832,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16612345",
+    "id": "16235391",
     "title": "Ep46 - Tree! Tree! Tree!",
     "date": "Dec 9, 2024",
     "season": "s1",
@@ -822,7 +842,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16578901",
+    "id": "16199936",
     "title": "Ep45 - It's the Most Wonderful Time of the Year",
     "date": "Dec 2, 2024",
     "season": "s1",
@@ -832,7 +852,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16545678",
+    "id": "16159852",
     "title": "Ep44 - The Thanksgiving Episode",
     "date": "Nov 25, 2024",
     "season": "s1",
@@ -842,7 +862,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16512345",
+    "id": "16107717",
     "title": "Ep43 - The Holiday Prep Is ON",
     "date": "Nov 18, 2024",
     "season": "s1",
@@ -852,7 +872,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16478901",
+    "id": "16077116",
     "title": "Ep42 - A November to Remember",
     "date": "Nov 11, 2024",
     "season": "s1",
@@ -862,17 +882,17 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16445678",
+    "id": "16036445",
     "title": "Ep41 - It's Not Over Yet!",
     "date": "Nov 4, 2024",
     "season": "s1",
     "desc": "Extended October content with Halloween treats and trivia.",
     "year": "",
-    "keywords": "about accepted accountable act actions adversities affirmations ahead all always and another answer answers anything anytime are area around attitude authentic away back basically beautifully best better board bounce boundaries breath breathe burdens but can care carry certified challenge challenges challenging charge cherish choices churchill come comfortable compassion compassionate comprise congratulations connect connected connection connections constant continue courage cracks create created cultivating deep derek destiny did didn diving does don down each embrace encounter enough enters entertain even every extend faced feel feelings filled find first five for forget forgive forgiveness forgiving forward fourth friend from fulfilling garden george get greater greatness greetings grow grows growth guide happy hashtag have healing hear heart herbert here high honor host how images impact imperfections including inspire instagram intentions interactions into involves isn joining journey judgment just king know last lead learned let life light like linkedin listen live long longer look looking love luther made make makes making martin mean means meets mind mirror moment monday more move moves need new not notice now nurture occasional often old once one others our ourselves out owning past people performance person place podcasts poet power practice practices price psychiatrist psychiatry purpose question ready reflect reflections refresher reintegrate reintegration relationship relationships release remember repair resonate respect responsibility restorative right robert rumi said same say science second see seeing self send serves setbacks share shine should show silent sink slow soul speaker specializes sports spot step steps stronger sunday sundays sweet take taken talked tapestry thank that the them then these they things think third this those through tiny today tomorrow topics towards transformation transformative transforms true truly trusting twitter tyranny ultimately understood until use using value values walk want was watch way week welcome well what where who why will winston wisely with within words world would wound wow you your yourself youtube",
-    "hasTranscript": true
+    "keywords": [],
+    "hasTranscript": false
   },
   {
-    "id": "16412345",
+    "id": "15986436",
     "title": "Ep40 - Halloween Ends",
     "date": "Oct 28, 2024",
     "season": "s1",
@@ -882,7 +902,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16378901",
+    "id": "15951550",
     "title": "Ep39 - Terrifier... I Hardly Know Her!",
     "date": "Oct 21, 2024",
     "season": "s1",
@@ -892,7 +912,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16345678",
+    "id": "15901634",
     "title": "Ep38 - Bling'd Up!",
     "date": "Oct 14, 2024",
     "season": "s1",
@@ -902,7 +922,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16312345",
+    "id": "15872098",
     "title": "Ep37 - Throat Fart",
     "date": "Oct 7, 2024",
     "season": "s1",
@@ -912,7 +932,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16278901",
+    "id": "15833709",
     "title": "Ep36 - Tonight, On A Very Special Episode",
     "date": "Sep 30, 2024",
     "season": "s1",
@@ -922,7 +942,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16245678",
+    "id": "15793034",
     "title": "Ep35 - Oh...Oh...Oh...Ice Cold Milk",
     "date": "Sep 23, 2024",
     "season": "s1",
@@ -932,7 +952,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16212345",
+    "id": "15750859",
     "title": "Ep34 - Pet Peeve",
     "date": "Sep 16, 2024",
     "season": "s1",
@@ -942,7 +962,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16178901",
+    "id": "15712091",
     "title": "Ep33 - Hot and Cold",
     "date": "Sep 9, 2024",
     "season": "s1",
@@ -952,7 +972,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16145678",
+    "id": "15675871",
     "title": "Ep32 - Tastes Like Burning",
     "date": "Sep 2, 2024",
     "season": "s1",
@@ -962,7 +982,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16112345",
+    "id": "15633004",
     "title": "Ep31 - Go, Shawty, It's Your Birthday!!!",
     "date": "Aug 26, 2024",
     "season": "s1",
@@ -972,7 +992,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16078901",
+    "id": "15599377",
     "title": "Ep30 - Ditch Digger Dave",
     "date": "Aug 19, 2024",
     "season": "s1",
@@ -982,7 +1002,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16045678",
+    "id": "15562377",
     "title": "Ep29 - Ice... Plunge... Is... COLD!!!",
     "date": "Aug 12, 2024",
     "season": "s1",
@@ -992,7 +1012,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "16012345",
+    "id": "15525860",
     "title": "Ep28 - Don't Fence Me In!",
     "date": "Aug 5, 2024",
     "season": "s1",
@@ -1002,7 +1022,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15978901",
+    "id": "15483292",
     "title": "Ep27 - I Scream, You Scream...",
     "date": "Jul 29, 2024",
     "season": "s1",
@@ -1012,7 +1032,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15945678",
+    "id": "15443305",
     "title": "Ep26 - Does Anyone Stay For The Credits?",
     "date": "Jul 22, 2024",
     "season": "s1",
@@ -1022,7 +1042,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15912345",
+    "id": "15409661",
     "title": "Ep25 - The Silver Anniversary",
     "date": "Jul 15, 2024",
     "season": "s1",
@@ -1032,7 +1052,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15878901",
+    "id": "15371001",
     "title": "Ep24 - Peanut Butter Jelly Time!",
     "date": "Jul 8, 2024",
     "season": "s1",
@@ -1042,7 +1062,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15845678",
+    "id": "15314461",
     "title": "Ep23 - Summertime... And The Livin' Is Easy",
     "date": "Jul 1, 2024",
     "season": "s1",
@@ -1052,7 +1072,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15812345",
+    "id": "15281860",
     "title": "Ep22 - Who Wants Some COOKIE PUSS?!?!?",
     "date": "Jun 24, 2024",
     "season": "s1",
@@ -1062,7 +1082,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15778901",
+    "id": "15246478",
     "title": "Ep21 - I've Got A Blank Space Cake Baby!",
     "date": "Jun 17, 2024",
     "season": "s1",
@@ -1072,7 +1092,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15745678",
+    "id": "15203331",
     "title": "Ep20 - Stranger Things are afoot at the Circle K",
     "date": "Jun 10, 2024",
     "season": "s1",
@@ -1082,7 +1102,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15712345",
+    "id": "15168659",
     "title": "Ep19 - Fifteen miles to the ...Dynamite SHACK!",
     "date": "Jun 3, 2024",
     "season": "s1",
@@ -1092,7 +1112,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15678901",
+    "id": "15136499",
     "title": "Ep18 - Pistol Packin' Goose",
     "date": "May 27, 2024",
     "season": "s1",
@@ -1102,7 +1122,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15645678",
+    "id": "15084922",
     "title": "Ep17 - The One With The (Killer) Clown",
     "date": "May 20, 2024",
     "season": "s1",
@@ -1112,7 +1132,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15612345",
+    "id": "15038496",
     "title": "Ep16 - Koi-anu Reeves",
     "date": "May 13, 2024",
     "season": "s1",
@@ -1122,7 +1142,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15578901",
+    "id": "15001755",
     "title": "Ep15 - Just a Couple of Muppets",
     "date": "May 6, 2024",
     "season": "s1",
@@ -1132,7 +1152,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15545678",
+    "id": "14953684",
     "title": "Ep14 - It's Not Just A Pillow",
     "date": "Apr 29, 2024",
     "season": "s1",
@@ -1142,7 +1162,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15512345",
+    "id": "14914635",
     "title": "Ep13 - Cherry!!!",
     "date": "Apr 22, 2024",
     "season": "s1",
@@ -1152,7 +1172,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15478901",
+    "id": "14880849",
     "title": "Ep12 - You'll Burn Your Eye Out Kid!",
     "date": "Apr 9, 2024",
     "season": "s1",
@@ -1162,7 +1182,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15445678",
+    "id": "14825140",
     "title": "Ep11 - Little Octopus Hot Dogs",
     "date": "Apr 2, 2024",
     "season": "s1",
@@ -1172,7 +1192,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15412345",
+    "id": "14804235",
     "title": "Ep10 - A Penny For Your... Door Dash??",
     "date": "Mar 26, 2024",
     "season": "s1",
@@ -1182,7 +1202,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15378901",
+    "id": "14742859",
     "title": "Ep9 - This One Goes To Eleven",
     "date": "Mar 19, 2024",
     "season": "s1",
@@ -1192,7 +1212,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15345678",
+    "id": "14703496",
     "title": "Ep8 - Tripping Vacuums",
     "date": "Mar 12, 2024",
     "season": "s1",
@@ -1202,7 +1222,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15312345",
+    "id": "14606553",
     "title": "Ep7 - Lime in the Coconut",
     "date": "Feb 27, 2024",
     "season": "s1",
@@ -1212,7 +1232,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15278901",
+    "id": "14560002",
     "title": "Ep6 - Rodents Of Unusual Size",
     "date": "Feb 20, 2024",
     "season": "s1",
@@ -1222,7 +1242,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15245678",
+    "id": "14544231",
     "title": "Ep5 - Twisted Twice Screws???",
     "date": "Feb 13, 2024",
     "season": "s1",
@@ -1232,7 +1252,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15212345",
+    "id": "14520017",
     "title": "Ep4 - Grammy's Homespun Burgers",
     "date": "Feb 6, 2024",
     "season": "s1",
@@ -1242,7 +1262,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15178901",
+    "id": "14519084",
     "title": "Ep3 - Dopamine... Dope-A-You!",
     "date": "Jan 30, 2024",
     "season": "s1",
@@ -1252,7 +1272,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15145678",
+    "id": "14508269",
     "title": "Ep2 - Oscars, Bears and Such",
     "date": "Jan 23, 2024",
     "season": "s1",
@@ -1262,7 +1282,7 @@ const episodes = [
     "hasTranscript": false
   },
   {
-    "id": "15112345",
+    "id": "14508104",
     "title": "Ep1 - Tap Tap Tap... Is This Thing On?",
     "date": "Jan 9, 2024",
     "season": "s1",
