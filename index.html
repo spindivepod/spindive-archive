@@ -4,60 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpinDive Podcast Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
+  :root { --cream: #F6EEDC; --paper: #FBF6EA; --navy: #1E1B3A; --orange: #E8582C; --yellow: #F2B33D; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; }
-  header { background: linear-gradient(135deg, #16213e, #0f3460); padding: 2rem; text-align: center; border-bottom: 2px solid #e94560; }
-  header h1 { font-size: 2.5rem; color: #fff; letter-spacing: 2px; }
-  header p { color: #a0a0c0; margin-top: 0.5rem; font-size: 0.95rem; }
-  .controls { padding: 1.5rem 2rem; background: #16213e; border-bottom: 1px solid #2a2a4a; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
-  #search { flex: 1; min-width: 200px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #e94560; background: #1a1a2e; color: #e0e0e0; font-size: 1rem; }
-  #search:focus { outline: none; box-shadow: 0 0 0 2px #e94560aa; }
+  body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; display: flex; flex-direction: column; }
+  .display { font-family: 'Bungee', 'Arial Black', sans-serif; font-weight: 400; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; }
+  .wordmark { font-family: 'Bungee', sans-serif; font-size: 1.6rem; letter-spacing: 0.04em; color: var(--navy); text-decoration: none; }
+  .pill-label { border: 2px solid var(--navy); border-radius: 999px; padding: 0.45rem 1.1rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+  header { position: relative; overflow: hidden; padding-bottom: 0.5rem; }
+  .hero { position: relative; z-index: 1; padding-top: 2.75rem; max-width: 760px; }
+  .hero h1 { font-family: 'Bungee', sans-serif; font-weight: 400; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 0.95; text-transform: uppercase; }
+  .hero p { font-size: 1.2rem; line-height: 1.45; margin-top: 1.25rem; max-width: 560px; }
+  .wheel { position: absolute; right: -110px; top: 95px; width: 330px; height: 330px; z-index: 0; }
+  .topbar, .controls { position: relative; z-index: 1; }
+  @media (max-width: 1100px) { .wheel { width: 230px; height: 230px; right: -95px; top: 100px; } }
+  .controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; padding: 1.25rem 0 0.5rem; }
+  #search { flex: 1; min-width: 220px; padding: 0.85rem 1.2rem; border-radius: 14px; border: 2px solid var(--navy); background: var(--paper); color: var(--navy); font: 500 1.05rem 'DM Sans', sans-serif; }
+  #search::placeholder { color: #1E1B3A88; }
+  #search:focus { outline: none; box-shadow: 4px 4px 0 var(--orange); }
   .filter-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-  .filter-btn { padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid #e94560; background: transparent; color: #e94560; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
-  .filter-btn.active, .filter-btn:hover { background: #e94560; color: #fff; }
-  #count { color: #a0a0c0; font-size: 0.9rem; white-space: nowrap; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1rem; padding: 1.5rem 2rem; }
-  .card { background: #16213e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1.2rem; transition: transform 0.2s, border-color 0.2s; }
-  .card:hover { transform: translateY(-2px); border-color: #e94560; }
-  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; }
-  .ep-title { font-size: 1rem; font-weight: 600; color: #fff; line-height: 1.3; }
-  .ep-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; white-space: nowrap; flex-shrink: 0; font-weight: 600; }
-  .s1 { background: #2a4a6a; color: #7ab8e8; }
-  .s2 { background: #3a2a5a; color: #c47ae8; }
-  .s3 { background: #2a5a3a; color: #7ae8a0; }
-  .ep-date { font-size: 0.8rem; color: #a0a0c0; margin-bottom: 0.6rem; }
-  .ep-desc { font-size: 0.88rem; color: #c0c0d8; line-height: 1.5; }
-  .ep-tags { margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
-  .ep-year { font-size: 0.8rem; background: #e9456022; color: #e94560; padding: 0.15rem 0.5rem; border-radius: 8px; border: 1px solid #e9456044; }
-  .ep-transcript { font-size: 0.75rem; background: #1a3a2a; color: #7ae8a0; padding: 0.15rem 0.5rem; border-radius: 8px; border: 1px solid #7ae8a044; }
-  .ep-listen { display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; color: #e94560; text-decoration: none; font-weight: 600; letter-spacing: 0.02em; }
-  .ep-listen:hover { text-decoration: underline; }
-  #no-results { text-align: center; color: #a0a0c0; padding: 3rem; font-size: 1.1rem; display: none; }
-  @media (max-width: 600px) { header h1 { font-size: 1.8rem; } .grid { padding: 1rem; } }
+  .filter-btn { padding: 0.5rem 1.1rem; border-radius: 999px; border: 2px solid var(--navy); background: transparent; color: var(--navy); cursor: pointer; font: 700 0.9rem 'DM Sans', sans-serif; transition: background 0.15s, color 0.15s; }
+  .filter-btn:hover { background: var(--yellow); }
+  .filter-btn.active { background: var(--navy); color: var(--cream); }
+  #count { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; white-space: nowrap; }
+  main { flex: 1; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.1rem; padding: 1.5rem 0 3rem; }
+  .card { background: var(--paper); border: 2px solid var(--navy); border-radius: 18px; padding: 1.3rem; display: flex; flex-direction: column; transition: transform 0.15s, box-shadow 0.15s; }
+  .card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--navy); }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.4rem; }
+  .ep-title { font-size: 1.08rem; font-weight: 700; line-height: 1.3; }
+  .ep-badge { font-size: 0.68rem; padding: 0.3rem 0.65rem; border-radius: 999px; white-space: nowrap; flex-shrink: 0; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .s1 { background: var(--yellow); color: var(--navy); }
+  .s2 { background: var(--orange); color: var(--navy); }
+  .s3 { background: var(--navy); color: var(--yellow); }
+  .ep-date { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; margin-bottom: 0.7rem; }
+  .ep-desc { font-size: 0.95rem; line-height: 1.5; }
+  .ep-tags { margin-top: 0.8rem; display: flex; gap: 0.45rem; flex-wrap: wrap; align-items: center; }
+  .ep-year { font-family: 'Bungee', sans-serif; font-size: 0.95rem; background: var(--navy); color: var(--yellow); padding: 0.3rem 0.7rem; border-radius: 10px; }
+  .card:nth-child(3n+2) .ep-year { background: var(--orange); color: var(--navy); }
+  .card:nth-child(3n) .ep-year { background: var(--yellow); color: var(--navy); }
+  .ep-transcript { font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 999px; border: 2px dashed var(--navy); }
+  .ep-listen { align-self: flex-start; margin-top: auto; display: inline-block; font-size: 0.85rem; font-weight: 700; color: var(--navy); text-decoration: none; border: 2px solid var(--navy); border-radius: 999px; padding: 0.4rem 1rem; transition: background 0.15s, color 0.15s; }
+  .ep-tags + .ep-listen, .ep-desc + .ep-tags + .ep-listen { margin-top: 1rem; }
+  .ep-listen:hover { background: var(--orange); }
+  #no-results { text-align: center; padding: 3rem; font-size: 1.1rem; display: none; }
+  footer { background: var(--navy); color: var(--cream); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; padding-top: 1.6rem; padding-bottom: 1.6rem; font-size: 1.05rem; }
+  footer strong { font-weight: 700; }
+  footer a { color: var(--cream); text-decoration: none; }
+  footer a:hover { color: var(--yellow); }
+  @media (max-width: 700px) {
+    .wrap { padding: 0 1rem; }
+    .wheel { width: 170px; height: 170px; right: -75px; top: 95px; }
+    .hero { padding-right: 70px; }
+    .grid { grid-template-columns: 1fr; }
+    .pill-label { font-size: 0.65rem; padding: 0.35rem 0.8rem; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>🎡 SpinDive Archive</h1>
-  <p>133 episodes · Seasons 1–3 · Pern, Dave &amp; Joanne · 39 episodes with full transcript search</p>
+  <svg class="wheel" viewBox="-100 -100 200 200" aria-hidden="true">
+    <circle r="96" fill="#1E1B3A"/>
+    <g>
+      <path d="M0 0 L0 -90 A90 90 0 0 1 63.6 -63.6 Z" fill="#E8582C"/>
+      <path d="M0 0 L63.6 -63.6 A90 90 0 0 1 90 0 Z" fill="#F2B33D"/>
+      <path d="M0 0 L90 0 A90 90 0 0 1 63.6 63.6 Z" fill="#E8582C"/>
+      <path d="M0 0 L63.6 63.6 A90 90 0 0 1 0 90 Z" fill="#F2B33D"/>
+      <path d="M0 0 L0 90 A90 90 0 0 1 -63.6 63.6 Z" fill="#E8582C"/>
+      <path d="M0 0 L-63.6 63.6 A90 90 0 0 1 -90 0 Z" fill="#F2B33D"/>
+      <path d="M0 0 L-90 0 A90 90 0 0 1 -63.6 -63.6 Z" fill="#E8582C"/>
+      <path d="M0 0 L-63.6 -63.6 A90 90 0 0 1 0 -90 Z" fill="#F2B33D"/>
+    </g>
+    <circle r="17" fill="#1E1B3A"/>
+  </svg>
+  <div class="wrap">
+    <div class="topbar">
+      <span class="wordmark">SPINDIVE</span>
+      <span class="pill-label">The Archive</span>
+    </div>
+    <div class="hero">
+      <h1>Find<br>your year.</h1>
+      <p>133 episodes, every one searchable. Seasons 1–3 with Pern, Dave &amp; Joanne · 39 with full transcript search.</p>
+    </div>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search a year, a movie, a song, a snack…" oninput="filterEpisodes()">
+      <div class="filter-group">
+        <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+        <button class="filter-btn" onclick="setFilter('s1', this)">Season 1</button>
+        <button class="filter-btn" onclick="setFilter('s2', this)">Season 2</button>
+        <button class="filter-btn" onclick="setFilter('s3', this)">Season 3</button>
+        <button class="filter-btn" onclick="setFilter('year', this)">Year Dives</button>
+        <button class="filter-btn" onclick="setFilter('transcript', this)">Has Transcript</button>
+      </div>
+      <span id="count">133 episodes</span>
+    </div>
+  </div>
 </header>
 
-<div class="controls">
-  <input type="text" id="search" placeholder="Search titles, topics, people, keywords…" oninput="filterEpisodes()">
-  <div class="filter-group">
-    <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
-    <button class="filter-btn" onclick="setFilter('s1', this)">Season 1</button>
-    <button class="filter-btn" onclick="setFilter('s2', this)">Season 2</button>
-    <button class="filter-btn" onclick="setFilter('s3', this)">Season 3</button>
-    <button class="filter-btn" onclick="setFilter('year', this)">Year Dives</button>
-    <button class="filter-btn" onclick="setFilter('transcript', this)">Has Transcript</button>
-  </div>
-  <span id="count">133 episodes</span>
-</div>
+<main class="wrap">
+  <div class="grid" id="grid"></div>
+  <div id="no-results">No episodes match your search.</div>
+</main>
 
-<div class="grid" id="grid"></div>
-<div id="no-results">No episodes match your search.</div>
+<footer>
+  <div class="wrap">
+    <strong>New episodes every Monday</strong>
+    <a href="https://www.buzzsprout.com/2316519" target="_blank" rel="noopener">Apple · Spotify · YouTube · Buzzsprout</a>
+  </div>
+</footer>
 
 <script>
 const episodes = [
@@ -1417,8 +1477,8 @@ function renderCards(list) {
       <div class="ep-date">${ep.date}</div>
       <div class="ep-desc">${ep.desc}</div>
       <div class="ep-tags">
-        ${ep.year ? `<span class="ep-year">📅 ${ep.year} dive</span>` : ''}
-        ${ep.hasTranscript ? '<span class="ep-transcript">🔍 searchable</span>' : ''}
+        ${ep.year ? `<span class="ep-year">${ep.year}</span>` : ''}
+        ${ep.hasTranscript ? '<span class="ep-transcript">Transcript</span>' : ''}
       </div>
       ${ep.id ? `<a class="ep-listen" href="https://www.buzzsprout.com/2316519/${ep.id}" target="_blank" rel="noopener">▶ Listen</a>` : ''}
     `;
